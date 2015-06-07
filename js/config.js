@@ -32,8 +32,7 @@ var Config = (function () {
         data: { bentley: { greeting: 'NA', name: 'NA', desc: 'NA'} , gis: { greeting: 'NA', name: 'NA', desc: 'NA'}}
       });  
 
-      _ractive.observe( 'bentley', function ( newValue, oldValue ) {
-         // doSomethingWith( newValue );
+      _ractive.observe( 'bentley.desc', function ( newValue, oldValue ) {
          console.log('oldValue', oldValue);
          console.log('newValue', newValue);
       });  
