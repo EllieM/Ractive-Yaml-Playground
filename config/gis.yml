@@ -1,4 +1,16 @@
-# Some comment
+# Obj with properties
 greeting: 'hello'
 name: 'boris'
-desc: 'some description'
+desc: 'good'
+
+# Named Object with properties
+HelloWorld:
+  integer: 100
+  bool: false
+  string: 'some string'
+
+# Named Object with list
+BentleySkip:
+  - repo1
+  - repo2
+  - repo3

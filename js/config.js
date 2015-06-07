@@ -29,7 +29,13 @@ var Config = (function () {
       _ractive = new Ractive({
         el: '#container',
         template: '#template',
-        data: { bentley: { greeting: 'NA', name: 'NA'} , gis: { greeting: 'NA', name: 'NA', desc: 'NA'}}
+        data: { bentley: { greeting: 'NA', name: 'NA', desc: 'NA'} , gis: { greeting: 'NA', name: 'NA', desc: 'NA'}}
+      });  
+
+      _ractive.observe( 'bentley', function ( newValue, oldValue ) {
+         // doSomethingWith( newValue );
+         console.log('oldValue', oldValue);
+         console.log('newValue', newValue);
       });  
   };  
 
