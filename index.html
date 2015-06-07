@@ -46,8 +46,16 @@
               <p> name: {{gis.name}}</p>           
 
               <div class="well">
-                  <p> desc: {{gis.desc}}</p>
+                  val: <input value='{{gis.HelloWorld.integer}}'>
               </div>
+
+              <div class="well">
+                  <ul>
+                      {{#each gis.BentleySkip}}
+                          <li> {{this}} </li>
+                      {{/each}}
+                  </ul>
+              </div>              
           </div>
         </div>
 

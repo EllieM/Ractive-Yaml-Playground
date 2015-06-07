@@ -36,6 +36,11 @@ var Config = (function () {
          console.log('oldValue', oldValue);
          console.log('newValue', newValue);
       });  
+
+      _ractive.observe( 'gis.HelloWorld.integer', function ( newValue, oldValue ) {
+         console.log('oldValue', oldValue);
+         console.log('newValue', newValue);
+      });       
   };  
 
   var getBentleyConfig = function () {

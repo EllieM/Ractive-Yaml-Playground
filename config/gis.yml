@@ -1,7 +1,6 @@
 # Obj with properties
 greeting: 'hello'
 name: 'boris'
-desc: 'good'
 
 # Named Object with properties
 HelloWorld:
