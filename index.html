@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html lang='en-US'>
+<head>
+  <meta charset='utf-8'>
+  <title>ractive and yml</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id='container' class='container'>
+      <!--content goes here...-->    
+  </div>
+
+  <!--ractive template-->
+  <script id='template' type='text/ractive'>     
+      
+    <div class="row">
+      <div class="col-md-6">
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">bentley config</h3>
+          </div>
+          <div class="panel-body">
+              <p> greeting: {{bentley.greeting}}</p>
+              <p> name: {{bentley.name}}</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-6">
+
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title">gis config</h3>
+          </div>
+          <div class="panel-body">
+              <p> greeting: {{gis.greeting}}</p>
+              <p> name: {{gis.name}}</p>           
+              <p> desc: {{gis.desc}}</p>           
+          </div>
+        </div>
+
+      </div>
+    </div> 
+
+  </script>
+
+  <!--libs-->
+  <script src='js/jquery-2.0.3.min.js'></script>
+  <script src='js/bootstrap.min.js'></script>
+  <script src='js/ractive.min.js'></script>
+  <script src="js/js-yaml.min.js"></script>
+
+  <!--biz-->
+  <script src='js/config.js'></script>
+
+  <script>
+
+    $(document).ready(function() {
+        // console.log('document ready');
+
+        Config.init();
+        Config.getBentleyConfig();
+        Config.getGISConfig();
+    });
+
+  </script>
+
+  <style scoped>
+      .container {
+        padding: 20px;
+      }
+  </style>
+
+</body>
+</html>
